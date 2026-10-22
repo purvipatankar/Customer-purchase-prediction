@@ -28,24 +28,21 @@ This project uses machine learning to predict whether a customer will make a pur
 6. Evaluate the model using accuracy, precision, recall, and F1-score.
 
 
-5. 🏗️ Project Architecture & Pipeline
+5. The system follows a structured machine learning workflow, transforming raw customer data into meaningful purchase predictions.
 
-```mermaid
 flowchart TD
-    A[Customer Dataset] --> B[Data Preprocessing]
-    B --> C[Feature Selection]
-    C --> D[80:20 Train-Test Split]
-    D --> E[Feature Scaling]
-    E --> F[Logistic Regression]
-    F --> G[Purchase Prediction]
-    G --> H[Model Evaluation]
-    H --> I[82.67% Accuracy]
-```
+    A["📂 Customer Dataset<br/>1,500 Records"] --> B["🔍 Data Exploration<br/>& Preprocessing"]
+    B --> C["🎯 Feature & Target Selection<br/>PurchaseStatus"]
+    C --> D["✂️ Train-Test Split<br/>80% Training | 20% Testing"]
+    D --> E["⚖️ Feature Scaling<br/>StandardScaler"]
+    E --> F["🤖 Logistic Regression<br/>Model Training"]
+    F --> G["🔮 Purchase Prediction"]
+    G --> H["📊 Model Evaluation<br/>Accuracy, Precision, Recall, F1-Score"]
+    H --> I["✅ Results<br/>82.67% Accuracy"]
 
-Pipeline: Data Collection → Preprocessing → Feature Scaling → Model Training → Prediction → Evaluation.
-
-Output: Predicts whether a customer will make a purchase (`1`) or not (`0`).
-
+    style A fill:#E8F0FE,stroke:#4285F4,color:#202124
+    style F fill:#E6F4EA,stroke:#34A853,color:#202124
+    style I fill:#D1FAE5,stroke:#059669,color:#064E3B
 6. Model Accuracy
 The Logistic Regression model achieved **82.67% accuracy** on 300 test records.
 

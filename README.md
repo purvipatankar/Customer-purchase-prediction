@@ -20,29 +20,54 @@ This project uses machine learning to predict whether a customer will make a pur
 - **Scikit-learn** – Data preprocessing, model training, and evaluation
 
 4. Brief Methodology
-1. Load and explore the dataset.
-2. Separate input features from the target variable, `PurchaseStatus`.
-3. Split the dataset into 80% training data and 20% testing data.
-4. Standardize the features using `StandardScaler`.
-5. Train the Logistic Regression model.
-6. Evaluate the model using accuracy, precision, recall, and F1-score.
+- Load and explore the dataset.
+- Separate input features from the target variable, `PurchaseStatus`.
+- Split the dataset into 80% training data and 20% testing data.
+- Standardize the features using `StandardScaler`.
+- Train the Logistic Regression model.
+- Evaluate the model using accuracy, precision, recall, and F1-score.
 
 
-5. The system follows a structured machine learning workflow, transforming raw customer data into meaningful purchase predictions.
+5. Project Architecture
+The architecture shows how data flows through the different components of the system to generate a purchase prediction.
+Dataset Input
 
-flowchart TD
-    A["📂 Customer Dataset<br/>1,500 Records"] --> B["🔍 Data Exploration<br/>& Preprocessing"]
-    B --> C["🎯 Feature & Target Selection<br/>PurchaseStatus"]
-    C --> D["✂️ Train-Test Split<br/>80% Training | 20% Testing"]
-    D --> E["⚖️ Feature Scaling<br/>StandardScaler"]
-    E --> F["🤖 Logistic Regression<br/>Model Training"]
-    F --> G["🔮 Purchase Prediction"]
-    G --> H["📊 Model Evaluation<br/>Accuracy, Precision, Recall, F1-Score"]
-    H --> I["✅ Results<br/>82.67% Accuracy"]
+Customer Purchase Prediction Dataset (1,500 records)
 
-    style A fill:#E8F0FE,stroke:#4285F4,color:#202124
-    style F fill:#E6F4EA,stroke:#34A853,color:#202124
-    style I fill:#D1FAE5,stroke:#059669,color:#064E3B
+Data Preprocessing
+
+Data inspection, feature selection, target separation and scaling
+
+Train-Test Split
+
+80% training data · 20% testing data
+
+Logistic Regression Model
+
+Train the model using the training data
+
+Prediction and Evaluation
+
+Predict purchase status and calculate evaluation metrics
+
+Final Output
+
+82.67% accuracy · Purchase (1) or No Purchase (0)
+
+
+Project Pipeline
+The pipeline describes the steps followed to build and evaluate the machine learning model.
+1. Data Collection: Load the customer dataset into Google Colab.
+2. Data Exploration: Inspect the dataset, column names, data types and missing values.
+3. Feature Selection: Separate input features (X) from the target variable (PurchaseStatus).
+4. Data Splitting: Divide the data into 80% training and 20% testing sets using stratified sampling.
+5. Feature Scaling: Apply StandardScaler to standardize the input features.
+6. Model Training: Train the Logistic Regression algorithm using the training dataset.
+7. Prediction: Predict purchase status for the test dataset.
+8. Model Evaluation: Calculate accuracy, precision, recall, F1-score and the classification report.
+9. Result Analysis: Analyze prediction performance and identify possible improvements.
+3. Pipeline Summary
+Dataset → Preprocessing → Train-Test Split → Scaling → Model Training → Prediction → Evaluation
 6. Model Accuracy
 The Logistic Regression model achieved **82.67% accuracy** on 300 test records.
 

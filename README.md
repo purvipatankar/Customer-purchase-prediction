@@ -27,7 +27,26 @@ This project uses machine learning to predict whether a customer will make a pur
 5. Train the Logistic Regression model.
 6. Evaluate the model using accuracy, precision, recall, and F1-score.
 
-5. Model Accuracy
+
+5. 🏗️ Project Architecture & Pipeline
+
+```mermaid
+flowchart TD
+    A[Customer Dataset] --> B[Data Preprocessing]
+    B --> C[Feature Selection]
+    C --> D[80:20 Train-Test Split]
+    D --> E[Feature Scaling]
+    E --> F[Logistic Regression]
+    F --> G[Purchase Prediction]
+    G --> H[Model Evaluation]
+    H --> I[82.67% Accuracy]
+```
+
+Pipeline: Data Collection → Preprocessing → Feature Scaling → Model Training → Prediction → Evaluation.
+
+Output: Predicts whether a customer will make a purchase (`1`) or not (`0`).
+
+6. Model Accuracy
 The Logistic Regression model achieved **82.67% accuracy** on 300 test records.
 
 - **Correct Predictions:** 248
@@ -35,7 +54,7 @@ The Logistic Regression model achieved **82.67% accuracy** on 300 test records.
 
 The model performed well overall, with better recall for the No Purchase class than for the Purchase class.
 
-6. Conclusion and Future Improvements
+7. Conclusion and Future Improvements
 The project demonstrates how Logistic Regression can predict customer purchase behaviour using machine learning. The model achieved 82.67% accuracy, showing its potential to support customer analysis and marketing decisions.
 
 Future Improvements:
@@ -44,6 +63,6 @@ Future Improvements:
 - Explore additional customer features.
 - Improve the prediction of potential buyers.
 
-7. References
+8. References
 - [Scikit-learn Documentation](https://scikit-learn.org/stable/)
 - Dataset source: (https://www.kaggle.com/datasets/rabieelkharoua/predict-customer-purchase-behavior-dataset/data)
